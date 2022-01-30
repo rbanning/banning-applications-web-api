@@ -1,0 +1,233 @@
+[
+	{
+		"id": "suva",
+		"city": "Suva",
+		"country": "Fiji",
+		"utcOffset": 12,
+		"coordinates": "-18.13976880252182, 178.4241070069842",
+		"imageName": "suva.jpg",
+		"imageCredit": "Bill Fairs",
+		"imageCreditUrl": "https://unsplash.com/@moonboyz"
+	},
+	{
+		"id": "palikir",
+		"city": "Palikir",
+		"country": "Micronesia",
+		"utcOffset": 11,
+		"coordinates": "6.909854060550177, 158.1588363902771",
+		"imageName": "palikir.jpg",
+		"imageCredit": "Marek Okon",
+		"imageCreditUrl": "https://unsplash.com/@marekokon"
+	},
+	{
+		"id": "brisbane",
+		"city": "Brisbane",
+		"country": "Australia",
+		"utcOffset": 10,
+		"coordinates": "-27.375999859273737, 153.02779340447668",
+		"imageName": "brisbane.jpg",
+		"imageCredit": "Guillaume Marques",
+		"imageCreditUrl": "https://unsplash.com/@mrqs_g"
+	},
+	{
+		"id": "tokyo",
+		"city": "Tokyo",
+		"country": "Japan",
+		"utcOffset": 9,
+		"coordinates": "35.66606192340748, 139.76901792861528",
+		"imageName": "tokyo.jpg",
+		"imageCredit": "Jezael Melgoza",
+		"imageCreditUrl": "https://unsplash.com/@jezar"
+	},
+	{
+		"id": "kuala-lumpur",
+		"city": "Kuala Lumpur",
+		"country": "Malaysia",
+		"utcOffset": 8,
+		"coordinates": "2.886912015519658, 101.61408872607971",
+		"imageName": "kuala-lumpur.jpg",
+		"imageCredit": "Esmonde Yong",
+		"imageCreditUrl": "https://unsplash.com/@esmonde"
+	},
+	{
+		"id": "jakarta",
+		"city": "Jakarta",
+		"country": "Indonesia",
+		"utcOffset": 7,
+		"coordinates": "-6.213296999480988, 106.8116778528949",
+		"imageName": "jakarta.jpg",
+		"imageCredit": "Eko Herwantoro",
+		"imageCreditUrl": "https://unsplash.com/@madebyekhrwntro"
+	},
+	{
+		"id": "hanoi",
+		"city": "Hanoi",
+		"country": "Vietnam",
+		"utcOffset": 7,
+		"coordinates": "21.057231884207887, 105.84488096328158",
+		"imageName": "hanoi.jpg",
+		"imageCredit": "Silver Ringvee",
+		"imageCreditUrl": "https://unsplash.com/@silverringvee"
+	},
+	{
+		"id": "bishkek",
+		"city": "Bishkek",
+		"country": "Kyrgyzstan",
+		"utcOffset": 6,
+		"coordinates": "42.8768536020313, 74.57057361818113",
+		"imageName": "bishkek.jpg",
+		"imageCredit": "Mike Dudin",
+		"imageCreditUrl": "https://unsplash.com/@mikedudin"
+	},
+	{
+		"id": "nur-sultan",
+		"city": "Nur-Sultan",
+		"country": "Kazakhstan",
+		"utcOffset": 6,
+		"coordinates": "51.16164330953591, 71.46290560864078",
+		"imageName": "nur-sultan.jpg",
+		"imageCredit": "Travel With",
+		"imageCreditUrl": "https://unsplash.com/@travelwith"
+	},
+	{
+		"id": "moscow",
+		"city": "Moscow",
+		"country": "Russia",
+		"utcOffset": 3,
+		"coordinates": "55.77586885471686, 37.63814873706802",
+		"imageName": "moscow.jpg",
+		"imageCredit": "Artem Beliaikin",
+		"imageCreditUrl": "https://unsplash.com/@belart84"
+	},
+	{
+		"id": "kyiv",
+		"city": "Kyiv",
+		"country": "Ukraine",
+		"utcOffset": 2,
+		"coordinates": "50.445444104976055, 30.51893941476",
+		"imageName": "kyiv.jpg",
+		"imageCredit": "Tetiana Shevereva",
+		"imageCreditUrl": "https://unsplash.com/@tetti_yana"
+	},
+	{
+		"id": "pretoria",
+		"city": "Pretoria",
+		"country": "South Africa",
+		"utcOffset": 2,
+		"coordinates": "-25.72151685092932, 28.30477922387752",
+		"imageName": "pretoria.jpg",
+		"imageCredit": "Sipho Ndebele",
+		"imageCreditUrl": "https://unsplash.com/@siphokandebele"
+	},
+	{
+		"id": "vaduz",
+		"city": "Vaduz",
+		"country": "Liechtenstein",
+		"utcOffset": 1,
+		"coordinates": "47.14033008227769, 9.527744875002577",
+		"imageName": "vaduz.jpg",
+		"imageCredit": "Henrique Ferreira",
+		"imageCreditUrl": "https://unsplash.com/@rickpsd"
+	},
+	{
+		"id": "madrid",
+		"city": "Madrid",
+		"country": "Spain",
+		"utcOffset": 1,
+		"coordinates": "40.44205012855333, -3.678855438771478",
+		"imageName": "madrid.jpg",
+		"imageCredit": "Quique Olivar",
+		"imageCreditUrl": "https://unsplash.com/@quique_olivar"
+	},
+	{
+		"id": "copenhagen",
+		"city": "Copenhagen",
+		"country": "Denmark",
+		"utcOffset": 1,
+		"coordinates": "55.672348883103666, 12.559487427496043",
+		"imageName": "copenhagen.jpg",
+		"imageCredit": "Febiyan",
+		"imageCreditUrl": "https://unsplash.com/@febiyanr"
+	},
+	{
+		"id": "edinburgh",
+		"city": "Edinburgh",
+		"country": "Scotland, UK",
+		"utcOffset": 0,
+		"coordinates": "55.94810969867969, -3.199846645139047",
+		"imageName": "edinburgh.jpg",
+		"imageCredit": "jim Divine",
+		"imageCreditUrl": "https://unsplash.com/@jimdivine"
+	},
+	{
+		"id": "montevideo",
+		"city": "Montevideo",
+		"country": "Uruguay",
+		"utcOffset": -3,
+		"coordinates": "-34.82946370861052, -56.17814775678395",
+		"imageName": "montevideo.jpg",
+		"imageCredit": "Chris Slupski",
+		"imageCreditUrl": "https://unsplash.com/@kslupski"
+	},
+	{
+		"id": "santo-domingo",
+		"city": "Santo Domingo",
+		"country": "Dominican Republic",
+		"utcOffset": -4,
+		"coordinates": "18.48654167787089, -69.95065811248226",
+		"imageName": "santo-domingo.jpg",
+		"imageCredit": "Yi Wei",
+		"imageCreditUrl": "https://unsplash.com/@yyiwei"
+	},
+	{
+		"id": "port-au-prince",
+		"city": "Port-au-Prince",
+		"country": "Haiti",
+		"utcOffset": -5,
+		"coordinates": "18.595620260028625, -72.29579131284314",
+		"imageName": "port-au-prince.jpg",
+		"imageCredit": "Robin Canfield",
+		"imageCreditUrl": "https://unsplash.com/@robincanfield"
+	},
+	{
+		"id": "ottawa",
+		"city": "Ottawa",
+		"country": "Canada",
+		"utcOffset": -5,
+		"coordinates": "45.44374528409172, -75.5201834485705",
+		"imageName": "ottawa.jpg",
+		"imageCredit": "Randy Laybourne",
+		"imageCreditUrl": "https://unsplash.com/@randylaybourne"
+	},
+	{
+		"id": "san-jose",
+		"city": "San Jose",
+		"country": "Costa Rica",
+		"utcOffset": -6,
+		"coordinates": "9.928442097245334, -84.09034283261407",
+		"imageName": "san-jose.jpg",
+		"imageCredit": "Adrián Valverde",
+		"imageCreditUrl": "https://unsplash.com/@adrianvalverdem"
+	},
+	{
+		"id": "cabo-san-lucas",
+		"city": "Cabo San Lucas",
+		"country": "Mexico",
+		"utcOffset": -7,
+		"coordinates": "22.887682814421655, -109.92115385741849",
+		"imageName": "cabo-san-lucas.jpg",
+		"imageCredit": "Victoria Bragg",
+		"imageCreditUrl": "https://unsplash.com/@toritimephotos"
+	},
+	{
+		"id": "san-francisco",
+		"city": "San Francisco",
+		"country": "California",
+		"utcOffset": -8,
+		"coordinates": "37.800281967488765, -122.44069131350601",
+		"imageName": "san-francisco.jpg",
+		"imageCredit": "Braden Collum",
+		"imageCreditUrl": "https://unsplash.com/@bradencollum"
+	}
+
+]

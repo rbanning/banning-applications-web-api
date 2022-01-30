@@ -1,0 +1,3 @@
+text/plain
+****************
+Unsupported Content Type: text/plain

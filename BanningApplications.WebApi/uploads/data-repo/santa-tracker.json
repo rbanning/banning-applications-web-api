@@ -1,0 +1,493 @@
+[
+  {
+    "id": "wellington",
+    "city": "Wellington",
+    "country": "New Zealand",
+    "utcOffset": 13,
+    "coordinates": "-41.29200877656282, 174.7802930429344",
+    "imageName": "wellington.jpg",
+    "imageCredit": "Sulthan Auliya",
+    "imageCreditUrl": "https://unsplash.com/@swafie"
+  },
+  {
+    "id": "apia",
+    "city": "Apia",
+    "country": "Samoa",
+    "utcOffset": 13,
+    "coordinates": "-13.84988848577639, -171.75249768006506",
+    "imageName": "apia.jpg",
+    "imageCredit": "Adli Wahid",
+    "imageCreditUrl": "https://unsplash.com/@adliwahid"
+  },
+  {
+    "id": "nukualofa",
+    "city": "Nuku'alofa",
+    "country": "Tonga",
+    "utcOffset": 13,
+    "coordinates": "-21.13983794681393, -175.20334082190652",
+    "imageName": "nukualofa.jpg",
+    "imageCredit": "Adli Wahid",
+    "imageCreditUrl": "https://unsplash.com/@adliwahid"
+  },
+  {
+    "id": "yaren",
+    "city": "Yaren",
+    "country": "Nauru",
+    "utcOffset": 12,
+    "coordinates": "-0.540853968060231, 166.9183300852088",
+    "imageName": "yaren.jpg",
+    "imageCredit": "Winston Chen",
+    "imageCreditUrl": "https://unsplash.com/@winstonchen"
+  },
+  {
+    "id": "majuro",
+    "city": "Majuro",
+    "country": "Marshall Islands",
+    "utcOffset": 12,
+    "coordinates": "7.1164439629418315, 171.18595272596414",
+    "imageName": "majuro.jpg",
+    "imageCredit": "Kurt Cotoaga",
+    "imageCreditUrl": "https://unsplash.com/@kydroon"
+  },
+  {
+    "id": "honiara",
+    "city": "Honiara",
+    "country": "Solomon Islands",
+    "utcOffset": 11,
+    "coordinates": "-9.433982787962252, 159.95912788997902",
+    "imageName": "honiara.jpg",
+    "imageCredit": "Gilly Tanabose",
+    "imageCreditUrl": "https://unsplash.com/@glt23"
+  },
+  {
+    "id": "port-vila",
+    "city": "Port Vila",
+    "country": "Vanuatu",
+    "utcOffset": 11,
+    "coordinates": "-17.74706360548702, 168.35775612350687",
+    "imageName": "port-vila.jpg",
+    "imageCredit": "Adli Wahid",
+    "imageCreditUrl": "https://unsplash.com/@adliwahid"
+  },
+  {
+    "id": "port-moresby",
+    "city": "Port Moresby",
+    "country": "Papua New Guinea",
+    "utcOffset": 10,
+    "coordinates": "-9.427607443443838, 147.16807788097591",
+    "imageName": "port-moresby.jpg",
+    "imageCredit": "Jelilah Kum",
+    "imageCreditUrl": "https://unsplash.com/@jadah93"
+  },
+  {
+    "id": "dededo",
+    "city": "Dededo",
+    "country": "Guam",
+    "utcOffset": 10,
+    "coordinates": "13.54532908371431, 144.85065047775254",
+    "imageName": "dededo.jpg",
+    "imageCredit": "Danny Mc",
+    "imageCreditUrl": "https://unsplash.com/@dannymc"
+  },
+  {
+    "id": "alice-springs",
+    "city": "Alice Springs",
+    "country": "Australia",
+    "utcOffset": 9.5,
+    "coordinates": "-23.547193771971465, 133.93107845147904",
+    "imageName": "alice-springs.jpg",
+    "imageCredit": "Sue Tucker",
+    "imageCreditUrl": "https://unsplash.com/@sueinasp"
+  },
+  {
+    "id": "dili",
+    "city": "Dili",
+    "country": "East Timor",
+    "utcOffset": 9,
+    "coordinates": "-8.556585706848276, 125.56057105815061",
+    "imageName": "dili.jpg",
+    "imageCredit": "Trevar Skillicorn-Chilver",
+    "imageCreditUrl": "https://unsplash.com/@tachilver"
+  },
+  {
+    "id": "ngerulmud",
+    "city": "Ngerulmud",
+    "country": "Palau",
+    "utcOffset": 9,
+    "coordinates": "7.500094406393194, 134.62363820108914",
+    "imageName": "ngerulmud.jpg",
+    "imageCredit": "Kurt Cotoaga",
+    "imageCreditUrl": "https://unsplash.com/@kydroon"
+  },
+  {
+    "id": "seoul",
+    "city": "Seoul",
+    "country": "South Korea",
+    "utcOffset": 9,
+    "coordinates": "37.543019522265766, 126.97428663512368",
+    "imageName": "seoul.jpg",
+    "imageCredit": "Kenneth Bastian",
+    "imageCreditUrl": "https://unsplash.com/@onezeronine"
+  },
+  {
+    "id": "shanghai",
+    "city": "Shanghai",
+    "country": "China",
+    "utcOffset": 8,
+    "coordinates": "31.232432357110405, 121.46991662310153",
+    "imageName": "shanghai.jpg",
+    "imageCredit": "Edward He",
+    "imageCreditUrl": "https://unsplash.com/@bingham008"
+  },
+  {
+    "id": "taipei",
+    "city": "Taipei",
+    "country": "Taiwan",
+    "utcOffset": 8,
+    "coordinates": "25.05588601038101, 121.56199094324562",
+    "imageName": "taipei.jpg",
+    "imageCredit": "Thomas Tucker",
+    "imageCreditUrl": "https://unsplash.com/@tents_and_tread"
+  },
+  {
+    "id": "davao",
+    "city": "Davao",
+    "country": "Philippines",
+    "utcOffset": 8,
+    "coordinates": "7.248958807903479, 125.45057461762785",
+    "imageName": "davao.jpg",
+    "imageCredit": "Lester Casio",
+    "imageCreditUrl": "https://unsplash.com/@les_casio"
+  },
+  {
+    "id": "phnom-penh",
+    "city": "Phnom Penh",
+    "country": "Cambodia",
+    "utcOffset": 7,
+    "coordinates": "11.562798595727676, 104.9275563694833",
+    "imageName": "phnom-penh.jpg",
+    "imageCredit": "S.Ratanak",
+    "imageCreditUrl": "https://unsplash.com/@samboratanak"
+  },
+  {
+    "id": "bangkok",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "utcOffset": 7,
+    "coordinates": "14.477551593780502, 100.43327562993692",
+    "imageName": "bangkok.jpg",
+    "imageCredit": "Evan Krause",
+    "imageCreditUrl": "https://unsplash.com/@evankrause_"
+  },
+  {
+    "id": "mandalay",
+    "city": "Mandalay",
+    "country": "Myanmar",
+    "utcOffset": 6.5,
+    "coordinates": "21.966126656645635, 96.0956803388065",
+    "imageName": "mandalay.jpg",
+    "imageCredit": "Mike Swigunski",
+    "imageCreditUrl": "https://unsplash.com/@mike_swigunski"
+  },
+  {
+    "id": "dhaka",
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "utcOffset": 6,
+    "coordinates": "23.816763424842534, 90.41236148311715",
+    "imageName": "dhaka.jpg",
+    "imageCredit": "Salman Preeom",
+    "imageCreditUrl": "https://unsplash.com/@salman_preeom"
+  },
+  {
+    "id": "thimphu",
+    "city": "Thimphu",
+    "country": "Bhutan",
+    "utcOffset": 6,
+    "coordinates": "27.461344957416923, 89.6284603035424",
+    "imageName": "thimphu.jpg",
+    "imageCredit": "Adli Wahid",
+    "imageCreditUrl": "https://unsplash.com/@adliwahid"
+  },
+  {
+    "id": "kathmandu",
+    "city": "Kathmandu",
+    "country": "Nepal",
+    "utcOffset": 5.75,
+    "coordinates": "27.70698022541843, 85.31239950711723",
+    "imageName": "kathmandu.jpg",
+    "imageCredit": "Meghraj Neupane",
+    "imageCreditUrl": "https://unsplash.com/@meghraz"
+  },
+  {
+    "id": "patna",
+    "city": "Patna",
+    "country": "India",
+    "utcOffset": 5.5,
+    "coordinates": "25.59873236012572, 85.13857819788502",
+    "imageName": "patna.jpg",
+    "imageCredit": "Sidhant Shreshtha",
+    "imageCreditUrl": "https://unsplash.com/@starlord2003"
+  },
+  {
+    "id": "dushanbe",
+    "city": "Dushanbe",
+    "country": "Takikistan",
+    "utcOffset": 5,
+    "coordinates": "38.56479280813058, 68.78192288124724",
+    "imageName": "dushanbe.jpg",
+    "imageCredit": "Oziel Gómez",
+    "imageCreditUrl": "https://unsplash.com/@ozgomz"
+  },
+  {
+    "id": "kabul",
+    "city": "Kabul",
+    "country": "Afghanistan",
+    "utcOffset": 4.5,
+    "coordinates": "34.559281567914574, 69.21557797157436",
+    "imageName": "kabul.jpg",
+    "imageCredit": "matt brown",
+    "imageCreditUrl": "https://unsplash.com/@mattfilms1"
+  },
+  {
+    "id": "abu-dhabi",
+    "city": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "utcOffset": 4,
+    "coordinates": "24.462845443558255, 54.37457390780243",
+    "imageName": "abu-dhabi.jpg",
+    "imageCredit": "David Rodrigo",
+    "imageCreditUrl": "https://unsplash.com/@david__r"
+  },
+  {
+    "id": "tehran",
+    "city": "Tehran",
+    "country": "Iran",
+    "utcOffset": 3.5,
+    "coordinates": "35.67665513214398, 51.40749108158716",
+    "imageName": "tehran.jpg",
+    "imageCredit": "Omid Armin",
+    "imageCreditUrl": "https://unsplash.com/@omidarmin"
+  },
+  {
+    "id": "kampala",
+    "city": "Kampala",
+    "country": "Uganda",
+    "utcOffset": 3,
+    "coordinates": "0.32023878653509696, 32.59019742266819",
+    "imageName": "kampala.jpg",
+    "imageCredit": "Drew Willson",
+    "imageCreditUrl": "https://unsplash.com/@drew_willson"
+  },
+  {
+    "id": "nairobi",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "utcOffset": 3,
+    "coordinates": "-1.3038914892285058, 36.81992443512879",
+    "imageName": "nairobi.jpg",
+    "imageCredit": "Mustafa Omar",
+    "imageCreditUrl": "https://unsplash.com/@mustafa_omar"
+  },
+  {
+    "id": "lusaka",
+    "city": "Lusaka",
+    "country": "Zambia",
+    "utcOffset": 2,
+    "coordinates": "-15.400236618562925, 28.320400974063084",
+    "imageName": "lusaka.jpg",
+    "imageCredit": "Sylvester Mambwe",
+    "imageCreditUrl": "https://unsplash.com/@chocolatethumb"
+  },
+  {
+    "id": "windhoek",
+    "city": "Windhoek",
+    "country": "Namibia",
+    "utcOffset": 2,
+    "coordinates": "-22.560106401810703, 17.06394226054284",
+    "imageName": "windhoek.jpg",
+    "imageCredit": "Ndumiso Silindza",
+    "imageCreditUrl": "https://unsplash.com/@nerd_kool"
+  },
+  {
+    "id": "tunis",
+    "city": "Tunis",
+    "country": "Tunisia",
+    "utcOffset": 1,
+    "coordinates": "36.80888235071853, 10.181041686311774",
+    "imageName": "tunis.jpg",
+    "imageCredit": "Chermiti Mohamed",
+    "imageCreditUrl": "https://unsplash.com/@chermitovee"
+  },
+  {
+    "id": "vatican-city",
+    "city": "Vatican City",
+    "country": "Vatican City State",
+    "utcOffset": 1,
+    "coordinates": "41.902107428118, 12.454442996684003",
+    "imageName": "vatican-city.jpg",
+    "imageCredit": "Lawrence Reynolds",
+    "imageCreditUrl": "https://unsplash.com/@l_rey94"
+  },
+
+  {
+    "id": "douglas",
+    "city": "Douglas",
+    "country": "Isle of Man, UK",
+    "utcOffset": 0,
+    "coordinates": "54.152509291080506, -4.48474424467284",
+    "imageName": "douglas.jpg",
+    "imageCredit": "James Qualtrough",
+    "imageCreditUrl": "https://unsplash.com/@jamesq"
+  },
+  {
+    "id": "reykjavik",
+    "city": "Reykjavik",
+    "country": "Iceland",
+    "utcOffset": 0,
+    "coordinates": "64.1454535621103, -21.959903244774342",
+    "imageName": "reykjavik.jpg",
+    "imageCredit": "Annie Spratt",
+    "imageCreditUrl": "https://unsplash.com/@anniespratt"
+  },
+  {
+    "id": "dakar",
+    "city": "Dakar",
+    "country": "Senegal",
+    "utcOffset": 0,
+    "coordinates": "14.716326915108317, -17.463766694448267",
+    "imageName": "dakar.jpg",
+    "imageCredit": "Eyelit Studio",
+    "imageCreditUrl": "https://unsplash.com/@eyelit"
+  },
+  {
+    "id": "praia",
+    "city": "Praia",
+    "country": "Cabo Verde",
+    "utcOffset": -1,
+    "coordinates": "14.932961756383424, -23.512566442002232",
+    "imageName": "praia.jpg",
+    "imageCredit": "Belinda Fewings",
+    "imageCreditUrl": "https://unsplash.com/@bel2000a"
+  },
+  {
+    "id": "king-edward-point",
+    "city": "King Edward Point",
+    "country": "South Georgia and the South Sandwich Islands",
+    "utcOffset": -2,
+    "coordinates": "-54.28325372098651, -36.49366247205934",
+    "imageName": "king-edward-point.jpg",
+    "imageCredit": "Ian Parker",
+    "imageCreditUrl": "https://unsplash.com/@evanescentlight"
+  },
+  {
+    "id": "san-juan",
+    "city": "San Juan",
+    "country": "Puerto Rico",
+    "utcOffset": -3,
+    "coordinates": "18.451113756443302, -66.05566754375451",
+    "imageName": "san-juan.jpg",
+    "imageCredit": "Ramiro Collazo",
+    "imageCreditUrl": "https://unsplash.com/@artcollazomore"
+  },
+  {
+    "id": "nuuk",
+    "city": "Nuuk",
+    "country": "Greenland",
+    "utcOffset": -3,
+    "coordinates": "64.17895294584878, -51.72552125987308",
+    "imageName": "nuuk.jpg",
+    "imageCredit": "Visit Greenland",
+    "imageCreditUrl": "https://unsplash.com/@greenland"
+  },
+  {
+    "id": "bridgetown",
+    "city": "Bridgetown",
+    "country": "Barbados",
+    "utcOffset": -4,
+    "coordinates": "13.105486520291725, -59.612043231195976",
+    "imageName": "bridgetown.jpg",
+    "imageCredit": "Tom Jur",
+    "imageCreditUrl": "https://unsplash.com/@tomjur"
+  },
+  {
+    "id": "lima",
+    "city": "Lima",
+    "country": "Peru",
+    "utcOffset": -5,
+    "coordinates": "-12.074280757833641, -77.07361612105876",
+    "imageName": "lima.jpg",
+    "imageCredit": "Alvaro Palacios",
+    "imageCreditUrl": "https://unsplash.com/@xapalacioscx"
+  },
+  {
+    "id": "havana",
+    "city": "Havana",
+    "country": "Cuba",
+    "utcOffset": -5,
+    "coordinates": "23.094213405332273, -82.3721472074686",
+    "imageName": "havana.jpg",
+    "imageCredit": "Spencer Everett",
+    "imageCreditUrl": "https://unsplash.com/@sp3v"
+  },
+  {
+    "id": "belize-city",
+    "city": "Belize City",
+    "country": "Belize",
+    "utcOffset": -6,
+    "coordinates": "17.241393534289113, -88.7599401106912",
+    "imageName": "belize-city.jpg",
+    "imageCredit": "Alisa Matthews",
+    "imageCreditUrl": "https://unsplash.com/@starwarsgirl"
+  },
+  {
+    "id": "galapagos-islands",
+    "city": "Galapagos Islands",
+    "country": "Ecuador",
+    "utcOffset": -6,
+    "coordinates": "-0.8150150633615177, -91.04858260289981",
+    "imageName": "galapagos-islands.jpg",
+    "imageCredit": "Magdalena Kula Manchee",
+    "imageCreditUrl": "https://unsplash.com/@magdalenakulamanchee"
+  },
+  {
+    "id": "easter-island",
+    "city": "Easter Island",
+    "country": "Chile",
+    "utcOffset": -7,
+    "coordinates": "-27.113739446169614, -109.34636915004626",
+    "imageName": "easter-island.jpg",
+    "imageCredit": "Thomas Griggs",
+    "imageCreditUrl": "https://unsplash.com/@viajeenparacaidas"
+  },
+  {
+    "id": "vancouver",
+    "city": "Vancouver",
+    "country": "Canada",
+    "utcOffset": -8,
+    "coordinates": "49.25099155441118, -123.13077165596209",
+    "imageName": "vancouver.jpg",
+    "imageCredit": "Matt Wang",
+    "imageCreditUrl": "https://unsplash.com/@iseeworld"
+  },
+  {
+    "id": "juneau",
+    "city": "Juneau",
+    "country": "Alaska",
+    "utcOffset": -9,
+    "coordinates": "58.31749977153829, -134.31869083582137",
+    "imageName": "juneau.jpg",
+    "imageCredit": "Matt Artz",
+    "imageCreditUrl": "https://unsplash.com/@mattartz"
+  },
+  {
+    "id": "rarotonga",
+    "city": "Rarotonga",
+    "country": "Cork Islands",
+    "utcOffset": -10,
+    "coordinates": "-21.229019245487862, -159.77463645311136",
+    "imageName": "rarotonga.jpg",
+    "imageCredit": "Luke Marshall",
+    "imageCreditUrl": "https://unsplash.com/@lukemarshallimages"
+  }
+]
