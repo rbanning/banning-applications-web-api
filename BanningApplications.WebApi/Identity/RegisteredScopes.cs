@@ -26,6 +26,10 @@ namespace BanningApplications.WebApi.Identity
 
 				new Scope() { Id = "7e5295ae-ee02-4a14-a09a-42248678c608", Code = "loteria", Name = "BannApps Lotería", Secret = "2xXQ3", RequireEmailValidation = true,
 					Contacts = RegisteredContacts.Get(RegisteredContacts.ContactGroup.BanningApps) },
+
+				new Scope() { Id = "e4bf3789-1e8b-4dc4-8210-444237ba3ebe", Code = "bannapps", Name = "Banning Application", Secret = "3xPR7", TrelloConfig = TrelloConfig.Hallpass(), 
+					Contacts = RegisteredContacts.Get(RegisteredContacts.ContactGroup.BanningApps), SlackConfig = SlackConfig.Hallpass() },
+
 			};
 		}
 

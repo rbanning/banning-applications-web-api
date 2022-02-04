@@ -2,7 +2,8 @@
 
 namespace BanningApplications.WebApi.Dtos.settings
 {
-    public class settingsMappingProfile: Profile
+	// ReSharper disable once InconsistentNaming
+	public class settingsMappingProfile: Profile
     {
 		public settingsMappingProfile()
 		{

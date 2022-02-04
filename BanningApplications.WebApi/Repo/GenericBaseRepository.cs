@@ -35,7 +35,7 @@ namespace BanningApplications.WebApi.Repo
 		Task<bool> DeleteAsync(string id);
 		bool Delete(TEntity model);
 
-		TEntity UpdateEntity(TEntity entity, string modifiedBy, bool isNew = false);
+		TEntity UpdateEntityMeta(TEntity entity, string modifiedBy, bool isNew = false);
 
 
 		#endregion
@@ -85,7 +85,7 @@ namespace BanningApplications.WebApi.Repo
 			return query.OrderBy(m => m.CreateDate);
 		}
 
-		public virtual TEntity UpdateEntity(TEntity entity, string modifiedBy, bool isNew = false)
+		public virtual TEntity UpdateEntityMeta(TEntity entity, string modifiedBy, bool isNew = false)
 		{
 			if (entity == null) { throw new ArgumentNullException(nameof(entity)); }
 
@@ -148,7 +148,7 @@ namespace BanningApplications.WebApi.Repo
 		{
 			if (model == null) { throw new ArgumentNullException(nameof(model)); }
 
-			await _context.Set<TEntity>().AddAsync(UpdateEntity(model, modifiedBy, true));
+			await _context.Set<TEntity>().AddAsync(UpdateEntityMeta(model, modifiedBy, true));
 
 			return model;
 		}
@@ -265,7 +265,7 @@ namespace BanningApplications.WebApi.Repo
 
 				if (processed)
 				{
-					UpdateEntity(model, modifiedBy);
+					UpdateEntityMeta(model, modifiedBy);
 				}
 			}
 

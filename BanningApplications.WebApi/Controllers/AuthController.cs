@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Collections.Generic;
+using BanningApplications.WebApi.Helpers;
 using Microsoft.EntityFrameworkCore;
 
 namespace BanningApplications.WebApi.Controllers
@@ -1150,7 +1151,130 @@ namespace BanningApplications.WebApi.Controllers
 
 
 
+		#region >> SEED <<
 
+
+		[AllowAnonymous()]
+		[HttpPost("admin/seed/users/{scope}/{hash}")]
+		public async Task<IActionResult> SeedUsers([FromRoute] string scope, [FromRoute] string hash, List<SeededUser> model)
+		{
+			var calcHash = $"skippy-{scope.Replace("-", "").Substring(2, 8)}{DateTime.Now.Day}-alpha".ToBase64();
+			if (!calcHash.Equals(hash))
+			{
+				return new UnauthorizedObjectResult(calcHash);
+			}
+
+			if (model.Count == 0)
+			{
+				return new BadRequestObjectResult("missing seeded users");
+			}
+
+			var created = new List<string>();
+			var scoped = new List<string>();
+			var errors = new Dictionary<string, string>();
+
+			foreach (var seededUser in model)
+			{
+				if (SeededUsers.Contains(seededUser.Email))
+				{
+					var user = await _userManager.FindByEmailAsync(seededUser.Email);
+					if (user == null)
+					{
+						try
+						{
+							//create the user
+							user = new AppUser()
+							{
+								Id = Guid.NewGuid().ToString("n"),
+								UserName = seededUser.Email.ToLowerInvariant(),
+								Email = seededUser.Email,
+								Name = seededUser.Name,
+								EmailConfirmed = true
+							};
+							var result = await _userManager.CreateAsync(user, seededUser.Password);
+							if (result.Succeeded)
+							{
+								created.Add(user.Email);
+							}
+							else
+							{
+								user = null;
+								errors.Add($"create: {seededUser.Email}", ProcessIdentityErrors(result.Errors));
+							}
+						}
+						catch (Exception e)
+						{
+							user = null;
+							errors.Add($"create exception: {seededUser.Email}", $"creating user: {e.Message}");
+							Console.WriteLine($"Error creating seeded user: {seededUser.Email}");
+							Console.WriteLine(e.ToString());
+							Console.WriteLine();
+						}
+						
+					}
+
+					if (user != null)
+					{
+						try
+						{
+							var userScoped = await _scopedRolesRepo.FindAsync(user.Id, scope);
+							if (userScoped == null)
+							{					
+								string avatar = new AvatarRepo().RandomAvatar();
+								await _scopedRolesRepo.CreateOrUpdateAsync(user.Id, scope, seededUser.Role, avatar);
+								scoped.Add(seededUser.Email);
+							}
+						}
+						catch (Exception e)
+						{
+							errors.Add($"scope exception: {seededUser.Email}", $"creating scope: {e.Message}");
+
+						}
+					}
+				}
+			}
+
+			return new OkObjectResult(new {created, scoped, errors});
+		}
+
+		#region >> seeded users <<
+
+		public class SeededUser
+		{
+			public string Email { get; set; }
+			public string Name { get; set; }
+			public string Password { get; set; }
+			public string Role { get; set; }
+		}
+		private List<string> SeededUsers
+		{
+			get
+			{
+				return new List<string>()
+				{
+					"rob@myhallpass.com", "chester.b.tester@gmail.com", "nova.b.tester@gmail.com",
+					"gail@hallpassandfriends.com", "scotia.b.tester@gmail.com"
+				};
+			}
+		}
+
+		private string IdentityErrorToString(IdentityError error)
+		{
+			if (error == null)
+			{
+				return "";
+			}
+
+			return $"{error.Code} - {error.Description}";
+		}
+
+		private string ProcessIdentityErrors(IEnumerable<IdentityError> errors)
+		{
+			return string.Join(" | ", errors.Select(IdentityErrorToString));
+		}
+		#endregion
+
+		#endregion
 		#region >> ... HELPERS ... <<
 
 		private async Task<List<string>> ValidatePasswordStrengthAsync(AppUser user, string password)

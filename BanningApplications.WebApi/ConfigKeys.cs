@@ -20,12 +20,7 @@ namespace BanningApplications.WebApi
 		public const string EmailApi = Email + ":Api";
 
 		public const string DbSettings = "settings";
-		public const string DbTrelloData = "trellodata";
-		public const string DbDocket = "docket";
-		public const string DbAussieadmin = "aussieadmin";
+		public const string DbUnsplash = "unsplash";
 		public const string DbHook = "hook";
-		public const string DbNotifications = "notifications";
-		public const string DbTRG = "trg";
-		public const string DbTTFF = "ttff";
 	}
 }

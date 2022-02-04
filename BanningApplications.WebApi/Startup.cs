@@ -5,6 +5,7 @@ using System.Text.Json.Serialization;
 //using System.Text.Json.Serialization;
 using Azure.Storage.Blobs;
 using Azure.Storage.Queues;
+using BanningApplications.WebApi.Repo.unsplash;
 using BanningApplications.WebApi.Services.Blob;
 using BanningApplications.WebApi.Services.Queue;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -43,6 +44,7 @@ namespace BanningApplications.WebApi
 				mc.AddProfile(new Dtos.Identity.IdentityMappingProfile());
 				mc.AddProfile(new Dtos.settings.settingsMappingProfile());
 				mc.AddProfile(new Dtos.hook.hookMappingProfile());
+				mc.AddProfile(new Dtos.unsplash.unsplashMappingProfile());
 			});
 			services.AddSingleton(mappingConfig.CreateMapper());
 
@@ -236,6 +238,14 @@ namespace BanningApplications.WebApi
 					sql => sql.MigrationsAssembly(migrationAssembly));
 			});
 			services.AddScoped<Repo.hook.IHookRequestRepository, Repo.hook.HookRequestRepository>();
+
+			// -- unsplash
+			services.AddDbContext<Data.UnsplashDbContext>(options =>
+			{
+				options.UseSqlServer(Configuration.GetConnectionString(ConfigKeys.DbUnsplash),
+					sql => sql.MigrationsAssembly(migrationAssembly));
+			});
+			services.AddScoped<IUnsplashPhotographersRepository, UnsplashPhotographersRepository>();
 
 		}
 

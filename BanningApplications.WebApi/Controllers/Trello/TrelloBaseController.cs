@@ -6,7 +6,6 @@ using BanningApplications.WebApi.Dtos;
 using BanningApplications.WebApi.Services.Trello;
 using BanningApplications.WebApi.Services.Trello.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.FileSystemGlobbing.Internal;
 
 namespace BanningApplications.WebApi.Controllers.Trello
 {
