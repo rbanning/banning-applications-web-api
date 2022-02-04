@@ -12,6 +12,7 @@ namespace BanningApplications.WebApi.Entities
 		public const int ShortStringMaxLength = 20;
 		public const int LongStringMaxLength = 100;
 		public const int ExtraLongStringMaxLength = 500;
+		public const int SuperExtraLongStringMaxLength = 5000;
 	}
 	public abstract class BaseMetaEntityGeneric<T>
     {

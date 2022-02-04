@@ -1,14 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using BanningApplications.WebApi.Entities;
 
-namespace BanningApplications.WebApi.Entities.unsplash
+namespace BanningApplications.WebApi.Dtos.unsplash
 {
-    public class UnsplashPhoto: BaseMetaExtendedEntity
+    public class UnsplashPhotoCreateDto
     {
-	    [Required, MaxLength(BaseMetaEntityUtil.IdStringMaxLength)]
+        [MaxLength(BaseMetaEntityUtil.IdStringMaxLength)]
 	    public string UserName { get; set; }
-
-	    public virtual UnsplashPhotographer Photographer { get; set; }
 
 	    [Required] public int Width { get; set; }
 	    [Required] public int Height { get; set; }
@@ -28,16 +28,11 @@ namespace BanningApplications.WebApi.Entities.unsplash
 	    [MaxLength(BaseMetaEntityUtil.ShortStringMaxLength)]
 	    public string Color { get; set; }
 
-	    [MaxLength(BaseMetaEntityUtil.LongStringMaxLength)]
-	    public string Location { get; set; }
+	    public UnsplashLocationDto Location { get; set; }
 
-	    [MaxLength(BaseMetaEntityUtil.SuperExtraLongStringMaxLength)]
-	    public string TagsJson { get; set; }
-	    [MaxLength(BaseMetaEntityUtil.SuperExtraLongStringMaxLength)]
-	    public string TopicsJson { get; set; }
+	    public List<string> Tags { get; set; }
+	    public List<string> Topics { get; set; }
 
-
-	    //no max as this might be long!
-	    public string UrlsJson { get; set; }
+		public UnsplashPhotoUrlsDto Urls { get; set; }
     }
 }

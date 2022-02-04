@@ -5,6 +5,7 @@ using System.Text.Json.Serialization;
 //using System.Text.Json.Serialization;
 using Azure.Storage.Blobs;
 using Azure.Storage.Queues;
+using BanningApplications.WebApi.Helpers;
 using BanningApplications.WebApi.Repo.unsplash;
 using BanningApplications.WebApi.Services.Blob;
 using BanningApplications.WebApi.Services.Queue;
@@ -125,7 +126,7 @@ namespace BanningApplications.WebApi
 					options.JsonSerializerOptions.IgnoreNullValues = true;
 					options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
 				});
-
+			services.AddControllers(o => o.InputFormatters.Insert(o.InputFormatters.Count, new TextPlainInputFormatter()));
 
 			// *** Configure Identity ***
 			var identityConnectionString = Configuration.GetConnectionString("Identity");

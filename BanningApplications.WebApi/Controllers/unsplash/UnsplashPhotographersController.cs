@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using BanningApplications.WebApi.Dtos.unsplash;
 using BanningApplications.WebApi.Entities.unsplash;
@@ -9,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BanningApplications.WebApi.Controllers.unsplash
 {
     [Authorize(Policy = "scope:bannapps")]
-    [Route("api/unsplash")]
+    [Route("api/unsplash/photographers")]
     [ApiController]
     public class UnsplashPhotographersController: ApiBaseController
     {
@@ -23,6 +24,29 @@ namespace BanningApplications.WebApi.Controllers.unsplash
 		    _mapper = mapper;
 		    _repo = repo;
 	    }
+
+	    #region >> GETTERS <<
+
+	    [HttpGet()]
+	    public async Task<IActionResult> GetAllAsync([FromQuery] bool inclArchived)
+	    {
+		    var results = await _repo.GetAllAsync(inclArchived);
+		    return new OkObjectResult(_mapper.Map<IEnumerable<UnsplashPhotographerDto>>(results));
+	    }
+
+	    [HttpGet("{id}", Name = "GetUnsplashPhotographer")]
+	    public async Task<IActionResult> GetAsync([FromRoute] string id)
+	    {
+		    var result = await _repo.GetAsync(id);
+		    if (result == null)
+		    {
+			    return NotFound();
+		    }
+			//else
+		    return new OkObjectResult(_mapper.Map<UnsplashPhotographerDto>(result));
+	    }
+
+	    #endregion
 
 	    #region >> SETTERS <<
 
@@ -47,7 +71,7 @@ namespace BanningApplications.WebApi.Controllers.unsplash
 		    entity = await _repo.CreateAsync(entity, usr.Email);
 		    await _repo.SaveAsync();
 
-		    return new OkObjectResult(_mapper.Map<UnsplashPhotographerDto>(entity));
+		    return CreatedAtRoute("GetUnsplashPhotographer", new {id = entity.Id}, _mapper.Map<UnsplashPhotographerDto>(entity));
 	    }
 
 	    #endregion

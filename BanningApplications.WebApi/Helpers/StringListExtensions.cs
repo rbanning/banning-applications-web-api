@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BanningApplications.WebApi.Helpers
 {
@@ -59,7 +57,7 @@ namespace BanningApplications.WebApi.Helpers
 				list.Add(value);
 			}
 
-			return list?.ToDelimString(delim);
+			return list.ToDelimString(delim);
 		}
 
 		public static string RemoveFromListString(this string me, string value)
