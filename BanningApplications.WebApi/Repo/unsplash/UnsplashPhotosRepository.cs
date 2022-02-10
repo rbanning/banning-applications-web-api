@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using BanningApplications.WebApi.Data;
 using BanningApplications.WebApi.Dtos;
 using BanningApplications.WebApi.Dtos.unsplash;
@@ -10,7 +12,10 @@ namespace BanningApplications.WebApi.Repo.unsplash
 
 	public interface IUnsplashPhotosRepository: IGenericBaseRepository<UnsplashPhoto>
 	{
-        //others?
+        //GETTERS
+        Task<IList<UnsplashPhoto>> GetAllByPhotographerAsync(string username, bool inclArchived = false);
+        Task<IList<UnsplashPhoto>> GetAllByTagAsync(string tag, bool inclArchived = false);
+        Task<IList<UnsplashPhoto>> GetAllByTopicAsync(string topic, bool inclArchived = false);
 	}
 
     public class UnsplashPhotosRepository: GenericBaseRepository<UnsplashPhoto, UnsplashDbContext>, IUnsplashPhotosRepository
@@ -19,6 +24,25 @@ namespace BanningApplications.WebApi.Repo.unsplash
 		    :base(context)
 	    {}
 
+	    #region >> Custom GETTERS <<
+
+	    public async Task<IList<UnsplashPhoto>> GetAllByPhotographerAsync(string username, bool inclArchived = false)
+	    {
+		    return await GetAllAsync(m => m.UserName == username, inclArchived);
+	    }
+
+	    public async Task<IList<UnsplashPhoto>> GetAllByTagAsync(string tag, bool inclArchived = false)
+	    {
+		    return await GetAllAsync(m => m.TagsJson.Contains(tag), inclArchived);
+	    }
+
+	    public async Task<IList<UnsplashPhoto>> GetAllByTopicAsync(string topic, bool inclArchived = false)
+	    {
+		    return await GetAllAsync(m => m.TopicsJson.Contains(topic), inclArchived);
+	    }
+
+
+	    #endregion
 
 	    #region >> PATCHES <<
 

@@ -16,6 +16,9 @@ namespace BanningApplications.WebApi.Dtos.unsplash
 			    .ForMember(m => m.Location, opt => opt.MapFrom(src => src.Location.Deserialize<UnsplashLocationDto>()))			    
 			    .ForMember(m => m.Urls, opt => opt.MapFrom(src => UnsplashPhotoUrlsDto.DeserializeFrom(src.UrlsJson)));
 
+		    CreateMap<Entities.unsplash.UnsplashAwardWinner, UnsplashAwardWinnerDto>();
+
+		    CreateMap<Entities.unsplash.GameScore, GameScoreDto>();
 	    }
     }
 }

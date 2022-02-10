@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BanningApplications.WebApi.Identity.AuthReq
 {
@@ -17,7 +14,7 @@ namespace BanningApplications.WebApi.Identity.AuthReq
 		}
 		public RoleRequirement(params string[] roles)
 		{
-			ValidRoles = roles.ToList<string>();
+			ValidRoles = roles.ToList();
 		}
 	}
 

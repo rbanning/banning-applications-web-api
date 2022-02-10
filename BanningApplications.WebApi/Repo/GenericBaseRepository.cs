@@ -47,7 +47,7 @@ namespace BanningApplications.WebApi.Repo
 		#endregion
 	}
 
-	public class GenericBaseRepository<TEntity, TDbContext> : IGenericBaseRepository<TEntity> 
+	public class GenericBaseRepository<TEntity, TDbContext> : IGenericBaseRepository<TEntity>
 	    where TEntity : Entities.BaseMetaExtendedEntity
 		where TDbContext: DbContext
     {

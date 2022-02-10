@@ -15,6 +15,8 @@ namespace BanningApplications.WebApi.Data
 
 	    public DbSet<UnsplashAwardWinner> UnsplashAwardWinners { get; set; }
 
+	    public DbSet<GameScore> GameScores { get; set; }
+
 	    protected override void OnModelCreating(ModelBuilder modelBuilder)
 	    {
 		    modelBuilder.Entity<UnsplashPhotographer>()

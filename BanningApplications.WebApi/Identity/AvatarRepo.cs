@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BanningApplications.WebApi.Identity
 {
@@ -19,6 +16,12 @@ namespace BanningApplications.WebApi.Identity
 		{
 			var random = new Random(DateTime.Now.Millisecond);
 			var index = random.Next(0, this.Avatars.Count);
+			return GetAvatar(index);
+		}
+
+		public string GetAvatar(int index)
+		{
+			index = Math.Abs(index % Avatars.Count);
 			return this.Avatars[index];
 		}
 

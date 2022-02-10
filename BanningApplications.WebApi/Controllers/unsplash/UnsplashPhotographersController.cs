@@ -1,15 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using BanningApplications.WebApi.Dtos;
 using BanningApplications.WebApi.Dtos.unsplash;
 using BanningApplications.WebApi.Entities.unsplash;
+using BanningApplications.WebApi.Identity;
 using BanningApplications.WebApi.Repo.unsplash;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BanningApplications.WebApi.Controllers.unsplash
 {
-    [Authorize(Policy = "scope:bannapps")]
+	[Authorize(Policy = "mock-scope:bannapps")]
     [Route("api/unsplash/photographers")]
     [ApiController]
     public class UnsplashPhotographersController: ApiBaseController
@@ -27,6 +29,7 @@ namespace BanningApplications.WebApi.Controllers.unsplash
 
 	    #region >> GETTERS <<
 
+		[Authorize(Policy = "scope:bannapps")]
 	    [HttpGet()]
 	    public async Task<IActionResult> GetAllAsync([FromQuery] bool inclArchived)
 	    {
@@ -46,10 +49,23 @@ namespace BanningApplications.WebApi.Controllers.unsplash
 		    return new OkObjectResult(_mapper.Map<UnsplashPhotographerDto>(result));
 	    }
 
+	    [HttpGet("username/{username}")]
+	    public async Task<IActionResult> GetByUsernameAsync([FromRoute] string username)
+	    {
+		    var result = await _repo.GetByUsernameAsync(username);
+		    if (result == null)
+		    {
+			    return NotFound();
+		    }
+			//else
+		    return new OkObjectResult(_mapper.Map<UnsplashPhotographerDto>(result));
+	    }
+
 	    #endregion
 
 	    #region >> SETTERS <<
 
+		[Authorize(Policy = Policies.Names.AllowAdmin)]
 	    [HttpPost()]
 	    public async Task<IActionResult> CreateAsync(UnsplashPhotographerCreateDto model)
 	    {
@@ -73,6 +89,41 @@ namespace BanningApplications.WebApi.Controllers.unsplash
 
 		    return CreatedAtRoute("GetUnsplashPhotographer", new {id = entity.Id}, _mapper.Map<UnsplashPhotographerDto>(entity));
 	    }
+
+		
+		[Authorize(Policy = Policies.Names.AllowAdmin)]
+	    [HttpPatch("{id}")]
+	    public async Task<IActionResult> PatchAsync([FromRoute] string id, [FromBody] PatchDto patch)
+	    {
+		    var patches = new List<PatchDto>()
+		    {
+			    patch
+		    };
+
+		    return await PatchAsync(id, patches);
+	    }	
+	    
+
+		[Authorize(Policy = Policies.Names.AllowAdmin)]
+	    [HttpPatch("{id}/multiple")]
+	    public async Task<IActionResult> PatchAsync([FromRoute] string id, [FromBody] List<PatchDto> patches)
+	    {
+		    var usr = GetAppUser();
+		    if (usr == null)
+		    {
+			    return Unauthorized();
+		    }
+
+		    var entity = await _repo.GetAsync(id, true);
+		    if (entity == null)
+		    {
+			    return NotFound();
+		    }
+
+		    entity = _repo.Patch(entity, patches, usr.Email);
+		    await _repo.SaveAsync();
+		    return new OkObjectResult(_mapper.Map<UnsplashPhotographerDto>(entity));
+	    }	
 
 	    #endregion
     }

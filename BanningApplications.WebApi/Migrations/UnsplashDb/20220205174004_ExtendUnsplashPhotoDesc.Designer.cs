@@ -4,14 +4,16 @@ using BanningApplications.WebApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BanningApplications.WebApi.Migrations.UnsplashDb
 {
     [DbContext(typeof(UnsplashDbContext))]
-    partial class UnsplashDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220205174004_ExtendUnsplashPhotoDesc")]
+    partial class ExtendUnsplashPhotoDesc
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,9 +50,6 @@ namespace BanningApplications.WebApi.Migrations.UnsplashDb
                         .IsRequired()
                         .HasColumnType("nvarchar(36)")
                         .HasMaxLength(36);
-
-                    b.Property<bool>("Winner")
-                        .HasColumnType("bit");
 
                     b.Property<int>("Year")
                         .HasColumnType("int");
@@ -94,8 +93,8 @@ namespace BanningApplications.WebApi.Migrations.UnsplashDb
                         .HasColumnType("int");
 
                     b.Property<string>("Location")
-                        .HasColumnType("nvarchar(max)")
-                        .HasMaxLength(5000);
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.Property<string>("ModifiedBy")
                         .IsRequired()

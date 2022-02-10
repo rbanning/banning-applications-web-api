@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace BanningApplications.WebApi.Identity.AuthReq
 {
-    public class ScopeReqHandler : AuthorizationHandler<ScopeRequirement>
+	public class ScopeReqHandler : AuthorizationHandler<ScopeRequirement>
 	{
 		protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)
 		{

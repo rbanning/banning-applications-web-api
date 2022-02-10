@@ -33,8 +33,9 @@ namespace BanningApplications.WebApi
 				    sql => sql.MigrationsAssembly(migrationAssembly));
 		    });
 		    services.AddScoped<IUnsplashPhotographersRepository, UnsplashPhotographersRepository>();
-		    services.AddScoped<IUnsplashPhotographersRepository, UnsplashPhotographersRepository>();
-
+		    services.AddScoped<IUnsplashPhotosRepository, UnsplashPhotosRepository>();
+		    services.AddScoped<IUnsplashAwardWinnersRepository, UnsplashAwardWinnersRepository>();
+		    services.AddScoped<IGameScoresRepository, GameScoresRepository>();
 	    }
     }
 }

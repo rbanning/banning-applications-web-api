@@ -7,7 +7,11 @@ namespace BanningApplications.WebApi.Dtos.unsplash
 {
     public class UnsplashPhotoCreateDto
     {
-        [MaxLength(BaseMetaEntityUtil.IdStringMaxLength)]
+		//id is optional!
+        [MaxLength(BaseMetaEntityUtil.IdGuidMaxLength)]
+	    public string Id { get; set; }
+
+        [Required, MaxLength(BaseMetaEntityUtil.IdStringMaxLength)]
 	    public string UserName { get; set; }
 
 	    [Required] public int Width { get; set; }
@@ -19,9 +23,12 @@ namespace BanningApplications.WebApi.Dtos.unsplash
 	    public string BlurHash { get; set; }
 
 
-	    [MaxLength(BaseMetaEntityUtil.LongStringMaxLength)]
+	    [MaxLength(BaseMetaEntityUtil.ExtraLongStringMaxLength)]
 	    public string Description { get; set; }
 
+		//NOTE: some clients use "Alt" rather than "AltDescription"
+	    [MaxLength(BaseMetaEntityUtil.LongStringMaxLength)]
+	    public string Alt { get; set; }
 	    [MaxLength(BaseMetaEntityUtil.LongStringMaxLength)]
 	    public string AltDescription { get; set; }
 

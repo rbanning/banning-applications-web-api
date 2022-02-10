@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using BanningApplications.WebApi.Entities;
 
-namespace BanningApplications.WebApi.Entities.unsplash
+namespace BanningApplications.WebApi.Dtos.unsplash
 {
-    public class UnsplashAwardWinner: BaseMetaExtendedEntity
+    public class UnsplashAwardWinnerCreateDto
     {
-		[Required, MaxLength(BaseMetaEntityUtil.IdGuidMaxLength)]
+	    [Required, MaxLength(BaseMetaEntityUtil.IdGuidMaxLength)]
 		public string PhotoId { get; set; }
 
 		[Required]
@@ -15,8 +16,6 @@ namespace BanningApplications.WebApi.Entities.unsplash
 
 		[Required]
 		public bool Winner { get; set; }
-
-		public virtual UnsplashPhoto Photo { get; set; }
 
     }
 }

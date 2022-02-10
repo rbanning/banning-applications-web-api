@@ -1589,7 +1589,7 @@ namespace BanningApplications.WebApi.Controllers
 
 		}
 
-		protected class AuthLoginFailed
+		public class AuthLoginFailed
 		{
 			public enum FailReason
 			{

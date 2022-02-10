@@ -19,7 +19,7 @@ namespace BanningApplications.WebApi.Entities.unsplash
 	    public string BlurHash { get; set; }
 
 
-	    [MaxLength(BaseMetaEntityUtil.LongStringMaxLength)]
+	    [MaxLength(BaseMetaEntityUtil.ExtraLongStringMaxLength)]
 	    public string Description { get; set; }
 
 	    [MaxLength(BaseMetaEntityUtil.LongStringMaxLength)]
@@ -28,7 +28,7 @@ namespace BanningApplications.WebApi.Entities.unsplash
 	    [MaxLength(BaseMetaEntityUtil.ShortStringMaxLength)]
 	    public string Color { get; set; }
 
-	    [MaxLength(BaseMetaEntityUtil.LongStringMaxLength)]
+	    [MaxLength(BaseMetaEntityUtil.SuperExtraLongStringMaxLength)]
 	    public string Location { get; set; }
 
 	    [MaxLength(BaseMetaEntityUtil.SuperExtraLongStringMaxLength)]

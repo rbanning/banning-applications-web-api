@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BanningApplications.WebApi.Identity
 {
@@ -61,11 +56,23 @@ namespace BanningApplications.WebApi.Identity
 
 				}
 
+				//mock scope based policies
+				foreach (var scope in RegisteredScopes.All())
+				{
+					options.AddPolicy($"mock-scope:{scope.Code}",
+						policy => policy
+							.Requirements
+							.Add(new AuthReq.MockScopeRequirement(scope.Id)));
+
+				}
+
+
 			});
 
 			//register the requirement handlers
 			services.AddSingleton<IAuthorizationHandler, AuthReq.RoleReqHandler>();
 			services.AddSingleton<IAuthorizationHandler, AuthReq.ScopeReqHandler>();
+			services.AddSingleton<IAuthorizationHandler, AuthReq.MockScopeReqHandler>();
 		}
 
 		#endregion

@@ -17,7 +17,14 @@ namespace BanningApplications.WebApi.Controllers
 			{
 				try
 				{					
-					return User.ToAppUser();
+					var ret = User.ToAppUser();
+					//check for mock user
+					if (string.Equals(ret.Role, MockAuth.MOCK_ROLE))
+					{
+						ret.Scope = MockAuth.ExtractScopeFromObfuscateScopeId(ret.Scope);
+					}
+
+					return ret;
 				}
 				catch (Exception)
 				{
